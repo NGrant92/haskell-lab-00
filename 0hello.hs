@@ -22,12 +22,11 @@ type TransitionProbabilityFunction = Int -> Int -> Float -> Float
 type MotionFunction a = StdGen -> a -> (StdGen, a)
 
 main = do
-  putStr "Hello World"
   -- reading in people.txt file
   people_text <- readFile "people.txt"
   -- declaring people list before passing in people.txt
   let people :: [Person]
-    people = read people_text
+      people = read people_text
 
   putStr "Number of people coming: "
   print (length people)
