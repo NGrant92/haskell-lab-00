@@ -39,7 +39,7 @@ main = do
 
   let writePolygons :: [(Color, Polygon)] -> String
       writePolygons p = "<svg xmlns=\"http://www.w3.org/2000/svg\">"++(concatMap writePolygon p)++"</svg>"
-
+  -- ziping colour with list of polygons and repeats for as many polygons in the list
   let colorize :: Color -> [Polygon] -> [(Color, Polygon)]
       colorize = zip.repeat
 
